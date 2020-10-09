@@ -1,0 +1,25 @@
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+<mat-card>
+    <form (submit)="onLogin(loginForm)" #loginForm="ngForm" >
+        <mat-form-field class="example-full-width">
+          <mat-label>Email Address</mat-label>
+          <!-- <mat-error *ngIf="title.invalid">Title Cant Leave Empty</mat-error> -->
+          <input name="email" ngModel matInput type="email" #emailInput="ngModel" required email>
+          <mat-error *ngIf="emailInput.invalid"> Email Field Cant Leave Empty  </mat-error>
+        </mat-form-field>
+     
+        <mat-form-field class="example-full-width">
+          <mat-label>Password</mat-label>
+          <!-- <mat-error *ngIf="content.invalid">Title Cant Leave Empty</mat-error> -->
+          <input name="password" ngModel matInput type="password" #passwordInput="ngModel" required>
+          <mat-error *ngIf="passwordInput.invalid"> Password Field Cant Leave Empty  </mat-error>
+        </mat-form-field>
+        <button type="submit" mat-raised-button color="accent">Login</button>
+      </form>
+</mat-card>
+<div class="chatSection">
+  <div class="chatSectionDetails">
+    <p>Chat Section</p>
+    <p>Under Development</p>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+.noPostsyet {
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+.preview {
+    width: 100%;
+    height: 320px;
+    object-fit: contain;
+    background: #000;
+    box-shadow: 1px 1px 5px rgba(0,0,0,.5);
+}
+* {
+    box-sizing: border-box;
+}
+.chatSection {
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    float: left;
+    height: 100%;
+    border: 1px solid #ababab;
+}
+
+.postList {
+    display: inline-block;
+    width: 50%;
+    float: left;
+}
+.chatSectionDetails {
+    transform: translate(-50%, -50%);
+    top: 43%;
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    font-size: clamp(15px, 0vw, 30px);
+    font-weight: bold;
+    color: #6d6d6d;
+}

@@ -1,0 +1,29 @@
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+<mat-card *ngIf="!isLoading">
+    <form [formGroup]="form" (submit)="onAddPost()">
+        <mat-form-field class="example-full-width">
+          <mat-label>Post Title</mat-label>
+          <!-- <mat-error *ngIf="title.invalid">Title Cant Leave Empty</mat-error> -->
+          <input matInput formControlName="title" type="text">
+        </mat-form-field>
+
+        <div>
+          <button mat-stroked-button color="primary" color="primary" type="button" (click)="filePicker.click()" >Pick Image</button>
+          <input class="pickImage" type="file" (change)="onImagePicked($event)" #filePicker>
+          <img [src]="preview" width="100" height="100" *ngIf="preview && preview !== ''">
+        </div> 
+      
+        <mat-form-field class="example-full-width">
+          <mat-label>Post Content</mat-label>
+          <!-- <mat-error *ngIf="content.invalid">Title Cant Leave Empty</mat-error> -->
+          <textarea formControlName="content" matInput rows="6"></textarea>
+        </mat-form-field>
+        <button type="submit" mat-raised-button color="primary">Save Post</button>
+      </form>
+</mat-card>
+<div class="chatSection">
+  <div class="chatSectionDetails">
+    <p>Chat Section</p>
+    <p>Under Development</p>
+  </div>
+</div>
